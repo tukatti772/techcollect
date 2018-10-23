@@ -1,0 +1,40 @@
+
+
+<% if @user.image.blank? %>
+
+  <div class="mypage_image">
+    <%= image_tag 'noimage.jpg', style: "width:150px; height:150px; border-radius: 75px;" %><br>
+  </div>
+
+<% else %>
+
+  <div class="mypage_image">
+    <%= image_tag @user.image, style: "width:150px; height:150px; border-radius: 75px;"  %><br>
+  </div>
+
+<% end %>
+
+
+<div class="mypage_nickname">
+  <%= @user.nickname %>
+</div>
+
+<div class="mypage_job">
+  <%= @user.job %>
+</div>
+
+
+<% if user_signed_in? && current_user.id == @user.id %>
+
+<%= render 'arrangement2' %>
+
+<% end %>
+
+
+<div class="mypage_introduction">
+  <% if @user.introduction.blank? %>
+    自己紹介が記載されていません。
+  <% else %>
+    <%= simple_format(@user.introduction) %>
+  <% end %>
+</div>

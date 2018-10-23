@@ -1,0 +1,16 @@
+
+<% if @results.empty? %>
+
+  <div class="search-wrapper">
+    「<%= params[:wordsearch] %>」を含むニュースはありません。
+  </div>
+
+<% else %>
+
+  <div class="search-wrapper">
+    「<%= params[:wordsearch] %>」を含むニュースが<%= @results.count %>件ありました。
+  </div>
+
+  <%= render 'index', variables: @results %>
+
+<% end %>

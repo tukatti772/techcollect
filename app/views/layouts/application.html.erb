@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Techcollect.</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <%# font-awesome %>
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+  </head>
+
+  <body link="#0033cc" vlink="#0033cc">
+
+    <div class="all-wrapper">
+
+      <header>
+        <%= link_to "Techcollect.", root_path, class: "logo" %>
+
+        <% if user_signed_in? %>
+
+          <%= link_to "マイページ", user_path(current_user), class: :square_btn %>
+          <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: :square_btn %>
+
+        <% else %>
+
+          <%= link_to "新規登録", new_user_registration_path, class: :square_btn %>
+          <%= link_to "ログイン", new_user_session_path, class: :square_btn %>
+
+        <% end %>
+
+
+        <%= form_tag(home_wordsearch_path, method: :get, id: :searchform) do %>
+          <%= text_field_tag :wordsearch, '', placeholder: "ニュースを検索", id: :searchtextfield %>
+          <%= button_tag type: :submit, id: :searchbutton do %>
+            <i class="fas fa-search fa-2x"></i>
+          <% end %>
+        <% end %>
+
+
+
+
+      </header>
+
+      <div class="contents-wrapper">
+        <%= yield %>
+      </div>
+
+      <footer>
+        <div style="margin-top: 1.5%">
+        <%= link_to "about Techcollect.", home_about_path, style:"text-decoration: none; cursor: pointer; color: white;" %>&emsp;&emsp;
+        <%= link_to "利用規約", home_regulation_path, style:"text-decoration: none; cursor: pointer; color: white;" %>&emsp;&emsp;
+        <%=link_to "お問い合わせ", home_contact_path, style:"text-decoration: none; cursor: pointer; color: white;" %>&emsp;&emsp;(c) 2018 Techcollect.
+        </div>
+      </footer>
+
+    </div>
+
+  </body>
+
+</html>

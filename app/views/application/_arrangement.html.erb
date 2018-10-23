@@ -1,0 +1,43 @@
+<div class="arrange-wrapper">
+
+
+  <div class="arrange_icon">
+    <%= link_to home_index_path, style: "text-decoration: none;" do %>
+      <i class="far fa-calendar-alt fa-3x"></i>
+    <% end %>
+
+    <p class="arrange_text">新しい投稿から並べる</p>
+  </div>
+
+
+  <div class="arrange_icon" id="icon2">
+    <%= link_to home_indexbookmark_path, style: "text-decoration: none;" do %>
+     <i class="far fa-bookmark fa-3x"></i>
+    <% end %>
+
+    <p class="arrange_text">ブックマークの多い順に並べる</p>
+  </div>
+
+
+  <div class="arrange_icon" id="icon3">
+    <%= link_to home_indexcomment_path, style: "text-decoration: none;" do %>
+      <i class="far fa-comments fa-3x"></i>
+    <% end %>
+
+    <p class="arrange_text">コメントの多い順に並べる</p>
+  </div>
+
+
+  <div class="arrange_icon" id="icon4">
+    <%= link_to home_taglist_path, style: "text-decoration: none;" do %>
+      <i class="fas fa-tags fa-3x"></i>
+    <% end %>
+
+    <p class="arrange_text">タグで調べる</p>
+  </div>
+
+
+</div>
+
+
+

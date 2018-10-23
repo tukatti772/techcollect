@@ -1,0 +1,15 @@
+
+<% if flash[:notice] %>
+  <div class="notice">
+    <%= flash[:notice] %>
+  </div>
+<% end %>
+
+<%= render 'arrangement' %>
+
+
+<%= render 'index', variables: @allnews %>
+
+<div style="text-align: center; margin-top: 3%;">
+<%= paginate(@allnews) %>
+</div>

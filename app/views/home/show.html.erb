@@ -1,0 +1,108 @@
+
+<div class="show-wrapper">
+
+  <div class="title">
+    <%= link_to "#{@news.name}", "#{@news.link}", target: "_new", style: "text-decoration: none;" %>
+  </div>
+
+  <div>
+    <%= render 'taglist', var: @news %>
+  </div>
+
+
+   <div class="news-wrapper">
+
+    <% if picturenil?(@news) %>
+
+      <div class="picture-wrapper">
+        <%= image_tag('noimage.jpg',width: "80%", height: "150px", class: "imagestyle") %>
+      </div>
+
+      <div class="comment-wrapper">
+        <%= simple_format(@news.text) %>
+      </div>
+
+    <% else %>
+
+      <div class="picture-wrapper">
+        <%= image_tag(@news.picture,width: "80%", height: "150px", class: "imagestyle") %>
+      </div>
+
+      <div class="comment-wrapper">
+        <%= simple_format(@news.text) %>
+      </div>
+
+    <% end %>
+   </div>
+
+
+
+   <div class="bookmark-wrapper">
+     <span class="bookmark" id="bookmarksize"><%= render 'bookmarksize', var: @news %></span>&emsp;
+     <span class="comments" id="commentsize"><%= render 'commentsize', var: @news %></span>&emsp;
+     <%= time_ago_in_words(@news.created_at) %>前&emsp;
+     <i style="color: gray;"><%= @news.quotation %></i>
+   </div>
+
+
+  <% if user_signed_in? %>
+
+   <div id="bookmarkcheck">
+    <%= render 'bookmarkcheck', var: @news %>
+   </div>
+
+  <% end %>
+
+
+</div>  <%# end of .index %>
+
+
+
+<% if user_signed_in? %>
+
+
+  <%= form_for([@news,@newcomment], url: home_comment_index_path(@news), html: {method: :post}, remote: true ) do |f| %>
+
+    <div id="errors">
+      <%= render 'errormsg', var: @newcomment %>
+    </div>
+
+    <div style="text-align: center; margin-top: 50px;">
+      <%= f.text_area :comment, maxlength: 1000, id: "textfield", class: "commentbox" %>
+    </div>
+
+    <br>
+
+    <div style="text-align: center;">
+    <%= f.submit "コメントする", data: {confirm: "この内容でコメントしますか？"}, class: "comment_btn" %>
+    </div>
+
+  <% end %>
+
+
+  <div id="ajaxcomment">
+    <% if @comments.empty? %>
+      <div class="nocomment">コメントはありません。</div>
+    <% else %>
+      <%= render @comments %>
+    <% end %>
+  </div>
+
+
+<% else %>
+
+
+  <% if @comments.empty? %>
+
+    <div class="nocomment">コメントはありません。</div>
+
+  <% else %>
+
+    <% @comments.each do |comment| %>
+      <%= render 'logoutcomments', comment: comment %>
+    <% end %>
+
+  <% end %>
+
+
+<% end %>

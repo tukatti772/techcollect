@@ -1,0 +1,9 @@
+<% if var.errors.any? %>
+
+  <div class="errormessage">
+    <% var.errors.full_messages.each do |message| %>
+    <p><i class="far fa-times-circle"></i>&ensp;<%= message.delete("・") %></p>
+    <% end %>
+  </div>
+
+<% end %>

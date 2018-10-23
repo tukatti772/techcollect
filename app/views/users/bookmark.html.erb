@@ -1,0 +1,17 @@
+
+<% if @bookmarks.empty? %>
+
+  <div class="search-wrapper">
+    ブックマークしたニュースはありません。
+  </div>
+
+<% else %>
+
+  <div class="search-wrapper">
+    ブックマークしたニュース（全<%= @bookmarks.count %>件）
+  </div>
+
+<% end %>
+
+
+<%= render 'index', variables: @bookmarks %>

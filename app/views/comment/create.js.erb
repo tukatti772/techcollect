@@ -1,0 +1,4 @@
+$("#textfield").val("");
+$("#errors").html("<%= j(render 'errormsg', var: @newcomment) %>");
+$("#ajaxcomment").html("<%= j(render @comments) %>");
+$("#commentsize").html("<%= j(render 'commentsize', var: @news) %>");

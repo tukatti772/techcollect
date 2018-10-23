@@ -1,0 +1,9 @@
+<% if var.bookmarkcheck(var.id, current_user.id) %>
+
+  <%= link_to "ブックマーク中", home_unbookmark_path(var), method: :delete, class: "unbookmark_btn", remote: true %>
+
+<% else %>
+
+  <%= link_to "ブックマークする", home_bookmark_path(var), method: :post, class: "bookmark_btn", remote: true %>
+
+<% end %>

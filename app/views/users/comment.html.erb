@@ -1,0 +1,16 @@
+
+<% if @commentednews.empty? %>
+
+  <div class="search-wrapper">
+    コメントしたニュースはありません。
+  </div>
+
+<% else %>
+
+  <div class="search-wrapper">
+    コメントしたニュース（全<%= @commentednews.count %>件）
+  </div>
+
+<% end %>
+
+<%= render 'index', variables: @commentednews %>

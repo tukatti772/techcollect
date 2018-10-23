@@ -1,0 +1,31 @@
+<div class="arrange-wrapper">
+
+
+  <div class="arrange_icon2">
+    <%= link_to edit_user_registration_path, style: "text-decoration: none;" do %>
+      <i class="fas fa-edit fa-3x"></i>
+    <% end %>
+
+    <p class="arrange_text">ユーザー情報の編集</p>
+  </div>
+
+
+  <div class="arrange_icon2" id="icon2">
+    <%= link_to user_bookmark_path(current_user), style: "text-decoration: none;" do %>
+     <i class="far fa-bookmark fa-3x"></i>
+    <% end %>
+
+    <p class="arrange_text">ブックマークした記事一覧</p>
+  </div>
+
+
+  <div class="arrange_icon2" id="icon3">
+    <%= link_to user_comment_path(current_user), style: "text-decoration: none;" do %>
+      <i class="far fa-comments fa-3x"></i>
+    <% end %>
+
+    <p class="arrange_text">コメントした記事一覧</p>
+  </div>
+
+
+</div>

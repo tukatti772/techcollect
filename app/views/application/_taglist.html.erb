@@ -1,0 +1,7 @@
+<% tags = var.tag.split(/、/) %>
+<% tags.each do |tag| %>
+  <span class="tag">
+    <i class="fas fa-tags"></i>
+    <%= link_to "#{tag}", home_search_path(searchword: "#{tag}"), style: "text-decoration: none; color: white;" %>
+  </span>
+<% end %>

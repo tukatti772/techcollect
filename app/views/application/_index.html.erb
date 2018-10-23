@@ -1,0 +1,50 @@
+
+ <% variables.each do |variable| %>
+
+  <div class="index">
+
+   <div class="title">
+     <%= link_to "#{variable.name}", home_path(id: variable.id), style: "text-decoration: none;" %>
+    </div>
+
+   <div>
+    <%= render 'taglist', var: variable %>
+   </div>
+
+
+   <div class="news-wrapper">
+
+    <% if picturenil?(variable) %>
+
+      <div class="picture-wrapper">
+        <%= image_tag('noimage.jpg',width: "80%", height: "150px", class: "imagestyle") %>
+      </div>
+
+      <div class="comment-wrapper">
+        <%= simple_format(variable.text) %>
+      </div>
+
+    <% else %>
+
+      <div class="picture-wrapper">
+        <%= image_tag(variable.picture,width: "80%", height: "150px", class: "imagestyle") %>
+      </div>
+
+      <div class="comment-wrapper">
+        <%= simple_format(variable.text) %>
+      </div>
+
+    <% end %>
+   </div>
+
+
+   <div class="bookmark-wrapper">
+     <span class="bookmark"><i class="far fa-bookmark"></i>&ensp;<%= variable.bookmarks.size %></span>&emsp;
+     <span class="comments"><i class="far fa-comments"></i>&ensp;<%= variable.comments.size %></span>&emsp;
+     <%= time_ago_in_words(variable.created_at) %>前&emsp;
+     <i style="color: gray;"><%= variable.quotation %></i>
+   </div>
+
+  </div>
+
+<% end %>

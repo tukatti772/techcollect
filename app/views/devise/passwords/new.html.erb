@@ -1,0 +1,23 @@
+<p class="topfont2">パスワードを忘れましたか？</p>
+
+<p class="password_explanation">
+以下にメールアドレスを入力して、パスワード変更のメールを受け取ってください。
+</p>
+
+
+<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+  <%= devise_error_messages %>
+
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  </div>
+
+  <div class="actions2">
+    <%= f.submit "パスワードを受け取る" %>
+  </div>
+<% end %>
+
+<div class="sharedlinks-wrapper">
+<%= render "devise/shared/links" %>
+</div>

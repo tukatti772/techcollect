@@ -1,0 +1,7 @@
+
+<div class="search-wrapper">
+  「<%= params[:searchword] %>」を含むニュース（全<%= @results.count %>件)
+</div>
+
+
+<%= render 'index', variables: @results %>

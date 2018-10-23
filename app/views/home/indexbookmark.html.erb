@@ -1,0 +1,9 @@
+
+
+<%= render 'arrangement' %>
+
+<%= render 'index', variables: @allnews %>
+
+<div style="text-align: center; margin-top: 3%;">
+<%= paginate(@allnews) %>
+</div>

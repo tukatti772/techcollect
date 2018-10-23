@@ -1,0 +1,26 @@
+
+    <div class="user_comment_wrapper">
+
+
+      <div class="image_name_wrapper">
+        <%= link_to user_path(comment.user), style: "text-decoration: none;" do %>
+        <div>
+         <% if comment.user.image.blank? %>
+           <%= image_tag('noimage.jpg', style: "width:50px; height:50px; border-radius: 25px;") %>
+         <% else %>
+           <%= image_tag(comment.user.image, style: "width:50px; height:50px; border-radius: 25px;") %>
+         <% end %>
+        </div>
+        <% end %>
+
+        <div class="name_wrapper">
+          <%= comment.user_name %>&emsp;<span style="color: gray;"><%= time_ago_in_words(comment.created_at) %>前</span><br>
+          <span style="color: gray;"><%= comment.user.job %></span>
+        </div>
+      </div>  <%# /.image_name_wrapper %>
+
+
+      <div>
+      <%= simple_format(comment.comment) %>
+      </div>
+    </div> <%# /.user_comment_wrapper %>
