@@ -15,6 +15,7 @@ if Rails.env.production?
     }
 
     config.fog_directory  = 'techcollect'
+    config.cache_dir = "#{Rails.root}/tmp/uploads" #for Heroku
     end
 
 end
