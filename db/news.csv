@@ -1,6 +1,8 @@
-id,name,text,tag,link,bookmark,created_at,updated_at
-1,「全固体蓄電池」２年後に実用へ　スマホ、ＥＶなど安全・高性能化　他の次世代型も猛追,いいですねー。,リチウムイオン二次電池、全固体電池,https://www.sankei.com/premium/news/170226/prm1702260021-n1.html,0,2018-09-02,2018/9/2 13:39:00
-2,リチウムイオン電池の安全性が再び焦点に。“中国爆発″で日本に商機！?,安全性は大事だからねー。,リチウムイオン二次電池、マクセル,http://news.livedoor.com/article/detail/14314421/,0,2018-09-02,2018/9/2 13:39:00
-3,リチウムイオンバッテリーの生みの親が開発した急速充電可能で発火しない新型バッテリーとは？,面白い。,リチウムイオン二次電池、全固体電池、急速充電,http://news.livedoor.com/article/detail/12749592/,0,2018-09-02,2018/9/2 13:39:00
-4,EUVの実用化、レジストが最大の課題か,本当にできるのか！？,半導体、EUVレジスト,http://eetimes.jp/ee/articles/1802/22/news071.html,0,2018-09-02,2018/9/2 13:39:00
-5,テスラが「AIチップ」を自社開発すると、ここまで型破りなものになる,テスラ、大丈夫かな？,自動運転、人工知能、テスラ,https://wired.jp/2018/08/07/tesla_selfdriving/,0,2018-09-02,2018/9/2 13:39:00
+id,name,text,tag,link,bookmark,quotation,comment,picture
+1,"なぜ画面に直接触って操作できるのか？――「タッチパネル」の基礎知識
+",タッチパネルの検出方式、それらの長所・短所がまとめられていて分かりやすいですね。,タッチパネル、ディスプレイ,https://www.eizo.co.jp/eizolibrary/other/itmedia02_08/,0,EIZO株式会社ホームページ,0,https://www.eizo.co.jp/eizolibrary/other/itmedia02_08/tm_1009touch_01.jpg
+2,インセル型タッチパネルとは,インセル型のタッチパネルを作るには、メーカーの技術力が必要とのことです。,タッチパネル、ディスプレイ,https://k-tai.watch.impress.co.jp/docs/column/keyword/700010.html,0,ケータイWatch,0,https://k-tai.watch.impress.co.jp/img/ktw/docs/700/010/01.png
+3,集約進むタッチパネル市場、生き残りの鍵は2つ,車載用のタッチパネルが徐々に伸びていく。また、フレキシブルディスプレイによって差別化を図れるだろう、とのこと。,タッチパネル、ディスプレイ,http://eetimes.jp/ee/articles/1706/23/news013.html,0,EETimesJapan,0,http://image.itmedia.co.jp/ee/articles/1706/23/tt170623Display02.jpg
+4,世界初の折りたたみ画面スマホ「FlexPai」、約15万円から,もともとフレキシブルディスプレイを手掛けていた中国メーカーのRoyoleが、世界初となる折りたたみ画面スマホを発売するとのこと。,タッチパネル、スマホ、Royole,https://headlines.yahoo.co.jp/hl?a=20181102-00010001-engadgetj-prod,0,Engadget,0,
+5,"グラフェン超薄膜と銀ナノワイヤを用いた透明電極フィルム
+",ITO膜に代わるものとして、グラフェンや銀ナノワイヤは有力な候補。これらを組み合わせてポリマー塗布することにより、両者の長所を活かした透明電極フィルムが得られた。（全文読むには、リンク先で会員登録が必要です。）,グラフェン、銀ナノワイヤ、透明電極,https://tech.nikkeibp.co.jp/dm/atcl/feature/15/355148/031000008/,0,日経XTECH,0,"https://tech.nikkeibp.co.jp/dm/atcl/feature/15/355148/031000008/z01.jpg?__scale=w:500,h:367&_sh=0d90340fc0"

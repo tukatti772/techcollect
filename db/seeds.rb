@@ -11,5 +11,6 @@ require "csv"
 news_csv = CSV.readlines("db/news.csv")
 news_csv.shift
 news_csv.each do |row|
-  News.create(name: row[1], text: row[2], tag: row[3], link: row[4], bookmark: row[5])
+  News.create(name: row[1], text: row[2], tag: row[3], link: row[4], bookmark: row[5],
+    quotation: row[6], comment: row[7], picture: row[8])
 end
