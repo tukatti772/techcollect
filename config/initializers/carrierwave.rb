@@ -14,9 +14,9 @@ CarrierWave.configure do |config|
     case Rails.env
     when 'development'
         config.fog_directory  = 'techcollect'
-        config.asset_host = 'https://s3.amazonaws.com/techcollect'
+        config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/techcollect'
     when 'production'
         config.fog_directory  = 'techcollect'
-        config.asset_host = 'https://s3.amazonaws.com/techcollect'
+        config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/techcollect'
     end
 end
