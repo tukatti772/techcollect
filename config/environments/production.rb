@@ -57,6 +57,9 @@ Rails.application.configure do
   # config.active_job.queue_name_prefix = "futuretech_#{Rails.env}"
   config.action_mailer.perform_caching = false
 
+  #deviseの本番環境での運用のため追記
+  config.action_mailer.default_url_options = { :host => 'http://techcollect.herokuapp.com' }
+
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
   # config.action_mailer.raise_delivery_errors = false
